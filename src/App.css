@@ -27,6 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+li.Navbar {
+	list-style-type: none;
+	display: inline-block;
+	padding: 5px;
+	border: 1px dashed #e6e6e6;
+	margin: 10px 5px;
+	width: 98px;
+}
 
 @keyframes App-logo-spin {
   from {
