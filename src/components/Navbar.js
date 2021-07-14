@@ -10,13 +10,18 @@ import Contact from "./Contact";
 import About from "./About";
 import '../App.css';
 
-// Params are placeholders in the URL that begin
-// with a colon, like the `:id` param defined in
-// the route in this example. A similar convention
-// is used for matching dynamic segments in other
-// popular web frameworks like Rails and Express.
 
 export default function Navbar() {
+	
+	const props_a = {firstName:"Shem", lastName:"Star", Age:20}
+	const props_b = {Salary:2400, City:"Unnao"}
+
+	let array_a = ["first","second","third"];
+	let array_b = ["fourth", "fifth", "sixsth"];
+	let merge_array = [...array_a,...array_b];
+	
+	console.warn(merge_array);
+
   return (
     <Router>
       <div>
@@ -33,7 +38,7 @@ export default function Navbar() {
         </ul>
 
 							
-								<Route path="/about"><About /></Route>
+								<Route path="/about"><About {...merge_array } {...props_a} {...props_b} /></Route>
 								<Route path="/contact"><Contact /></Route>
 								<Route path="/" exact={true}><Home /></Route>
 
